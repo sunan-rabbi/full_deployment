@@ -1,0 +1,262 @@
+[00:00:01.669] Server  LOG     ✓ Ready in 1154ms
+[00:00:06.204] Server  LOG     ○ Compiling / ...
+[00:00:09.486] Server  LOG     {}
+[00:00:11.534] Browser LOG     {}
+[00:00:12.267] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:00:13.560] Browser ERROR   Error fetching local users: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:3706:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:4221:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:5025:49)\n    at async Object.getLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:25:26)\n    at async fetchLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:1081:26)","status":404}
+[00:01:00.945] Browser LOG     {}
+[00:01:00.949] Server  LOG     ✓ Compiled in 89ms
+[00:01:01.252] Server  LOG     {}
+[00:01:02.076] Server  ERROR   ⨯ ReferenceError: log is not defined
+[00:01:02.140] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./lib/api.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:02.411] Server  LOG     {}
+[00:01:02.413] Server  LOG     
+[00:01:02.462] Server  LOG     ✓ Compiled in 0ms
+[00:01:06.638] Browser LOG     {}
+[00:01:06.638] Browser LOG     
+[00:01:07.208] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         style={{--vsc-domain:"\"localhost\""}}
+                        >
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:01:07.375] Browser ERROR   Error fetching local users: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:3706:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:4221:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:5025:49)\n    at async Object.getLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:26:26)\n    at async fetchLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:1082:26)","status":404}
+[00:01:11.408] Server  LOG     {}
+[00:01:11.413] Server  LOG     function wrap() {
+        return fn.apply(thisArg, arguments);
+    }
+[00:01:12.887] Browser LOG     {}
+[00:01:12.887] Browser LOG     
+[00:01:13.369] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:01:13.508] Browser ERROR   Error fetching local users: {"code":"ERR_BAD_REQUEST","config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"message":"Request failed with status code 404","name":"AxiosError","stack":"AxiosError: Request failed with status code 404\n    at settle (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:3706:16)\n    at XMLHttpRequest.onloadend (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:4221:174)\n    at Axios.request (http://localhost:3000/_next/static/chunks/node_modules_25f9d375._.js:5025:49)\n    at async Object.getLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:26:26)\n    at async fetchLocalUsers (http://localhost:3000/_next/static/chunks/_e6edae2e._.js:1082:26)","status":404}
+[00:01:26.889] Server  LOG     ✓ Compiled in 69ms
+[00:01:27.091] Browser LOG     {}
+[00:01:40.846] Server  LOG     ✓ Compiled in 88ms
+[00:01:41.097] Browser LOG     {}
+[00:01:42.236] Server  LOG     ✓ Compiled in 47ms
+[00:01:43.094] Browser LOG     {}
+[00:01:45.622] Server  LOG     ✓ Compiled in 73ms
+[00:01:46.089] Browser LOG     {}
+[00:01:49.249] Server  LOG     {}
+[00:01:50.729] Browser LOG     {}
+[00:01:51.391] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         style={{--vsc-domain:"\"localhost\""}}
+                        >
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:01:51.831] Browser LOG     {"config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5000","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"data":{"data":[{"email":"Serenity.Kuphal@yahoo.com","id":"15d7ea42-4c17-42cf-b8a6-72d3cfc9b372","name":"Adrienne Buckridge","phone":"775-965-8303"},{"email":"2103037@student.ruet.ac.bd","id":"e5a17318-a793-41cf-8b9b-b58bbb492da3","name":"Sunan Rabbi","phone":"01875899096"},{"email":"Liam3@gmail.com","id":"02fc6678-d46b-4e3e-8b34-b945d8a748d5","name":"Brad Hermann","phone":"981-461-0118"},{"email":"luffy@gmail.com","id":"ff3ab9c5-81e1-40a2-aedb-d5485491d152","name":"Luffy","phone":"2441139"}],"message":"Local users retrieved successfully!","statusCode":200,"success":true},"headers":{"content-length":"571","content-type":"application/json; charset=utf-8"},"request":{"url":"http://localhost:5000/api/v1/user"},"status":200,"statusText":"OK"}
+[00:02:36.761] Server  LOG     ✓ Compiled in 79ms
+[00:02:37.095] Browser LOG     NEXT_PUBLIC_API_URL: http://localhost:5000
+[00:03:22.844] Server  LOG     NEXT_PUBLIC_API_URL: "http://localhost:5000"
+[00:03:24.343] Browser LOG     NEXT_PUBLIC_API_URL: http://localhost:5000
+[00:03:25.041] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+-                         style={{--vsc-domain:"\"localhost\""}}
+                        >
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:03:25.187] Browser LOG     {"config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5000","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"data":{"data":[{"email":"Serenity.Kuphal@yahoo.com","id":"15d7ea42-4c17-42cf-b8a6-72d3cfc9b372","name":"Adrienne Buckridge","phone":"775-965-8303"},{"email":"2103037@student.ruet.ac.bd","id":"e5a17318-a793-41cf-8b9b-b58bbb492da3","name":"Sunan Rabbi","phone":"01875899096"},{"email":"Liam3@gmail.com","id":"02fc6678-d46b-4e3e-8b34-b945d8a748d5","name":"Brad Hermann","phone":"981-461-0118"},{"email":"luffy@gmail.com","id":"ff3ab9c5-81e1-40a2-aedb-d5485491d152","name":"Luffy","phone":"2441139"}],"message":"Local users retrieved successfully!","statusCode":200,"success":true},"headers":{"content-length":"571","content-type":"application/json; charset=utf-8"},"request":{"url":"http://localhost:5000/api/v1/user"},"status":200,"statusText":"OK"}
+[00:03:39.269] Server  LOG     ✓ Compiled in 66ms
+[00:03:47.385] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en">
+                          <body
+                            className="geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__var..."
+-                           wotdisconnected="true"
+                          >
+                  ...
+
+[00:03:47.385] Browser LOG     {"config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5000","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"data":{"data":[{"email":"Serenity.Kuphal@yahoo.com","id":"15d7ea42-4c17-42cf-b8a6-72d3cfc9b372","name":"Adrienne Buckridge","phone":"775-965-8303"},{"email":"2103037@student.ruet.ac.bd","id":"e5a17318-a793-41cf-8b9b-b58bbb492da3","name":"Sunan Rabbi","phone":"01875899096"},{"email":"Liam3@gmail.com","id":"02fc6678-d46b-4e3e-8b34-b945d8a748d5","name":"Brad Hermann","phone":"981-461-0118"},{"email":"luffy@gmail.com","id":"ff3ab9c5-81e1-40a2-aedb-d5485491d152","name":"Luffy","phone":"2441139"}],"message":"Local users retrieved successfully!","statusCode":200,"success":true},"headers":{"content-length":"571","content-type":"application/json; charset=utf-8"},"request":{"url":"http://localhost:5000/api/v1/user"},"status":200,"statusText":"OK"}
+[00:04:01.862] Browser LOG     {"config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5000","data":"{\"name\":\"Nana\",\"email\":\"2103037@student\",\"phone\":\"01875899096\"}","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"post","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"data":{"data":{"email":"2103037@student","id":"82d471f5-c4c5-4909-817c-e1651589503e","name":"Nana","phone":"01875899096"},"message":"Local user created successfully!","statusCode":201,"success":true},"headers":{"content-length":"193","content-type":"application/json; charset=utf-8"},"request":{"url":"http://localhost:5000/api/v1/user"},"status":201,"statusText":"Created"}
+[00:04:01.862] Browser LOG     {"config":{"adapter":["xhr","http","fetch"],"allowAbsoluteUrls":true,"baseURL":"http://localhost:5000","env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json"},"maxBodyLength":-1,"maxContentLength":-1,"method":"get","timeout":0,"transformRequest":[null],"transformResponse":[null],"transitional":{"clarifyTimeoutError":false,"forcedJSONParsing":true,"silentJSONParsing":true},"url":"/api/v1/user","xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN"},"data":{"data":[{"email":"Serenity.Kuphal@yahoo.com","id":"15d7ea42-4c17-42cf-b8a6-72d3cfc9b372","name":"Adrienne Buckridge","phone":"775-965-8303"},{"email":"2103037@student.ruet.ac.bd","id":"e5a17318-a793-41cf-8b9b-b58bbb492da3","name":"Sunan Rabbi","phone":"01875899096"},{"email":"Liam3@gmail.com","id":"02fc6678-d46b-4e3e-8b34-b945d8a748d5","name":"Brad Hermann","phone":"981-461-0118"},{"email":"luffy@gmail.com","id":"ff3ab9c5-81e1-40a2-aedb-d5485491d152","name":"Luffy","phone":"2441139"},{"email":"2103037@student","id":"82d471f5-c4c5-4909-817c-e1651589503e","name":"Nana","phone":"01875899096"}],"message":"Local users retrieved successfully!","statusCode":200,"success":true},"headers":{"content-length":"679","content-type":"application/json; charset=utf-8"},"request":{"url":"http://localhost:5000/api/v1/user"},"status":200,"statusText":"OK"}

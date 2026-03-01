@@ -1,0 +1,45 @@
+name: EC2 Connectivity Check
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  check-ec2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ~/.ssh/key
+          chmod 600 ~/.ssh/key
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Verify EC2 & Fetch Metadata
+        run: |
+          ssh -i ~/.ssh/key ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
+            echo "SSH connection successful!"
+
+            TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token \
+              -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
+
+            echo "Hostname: $(hostname)"
+            echo "Public IP: $(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+              http://169.254.169.254/latest/meta-data/public-ipv4)"
+            echo "Private IP: $(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+              http://169.254.169.254/latest/meta-data/local-ipv4)"
+            echo "Instance ID: $(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+              http://169.254.169.254/latest/meta-data/instance-id)"
+            echo "AZ: $(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+              http://169.254.169.254/latest/meta-data/placement/availability-zone)"
+            echo "Type: $(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
+              http://169.254.169.254/latest/meta-data/instance-type)"
+            echo "Uptime: $(uptime)"
+          EOF
+
+      - name: Cleanup
+        if: always()
+        run: rm -f ~/.ssh/key
