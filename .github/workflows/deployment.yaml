@@ -131,6 +131,10 @@ jobs:
             pm2 delete server || true
             pm2 start ~/${REPO}/backend/dist/src/server.js --name server
 
+            # Wait for server to start
+            echo "Waiting for server to start..."
+            sleep 5
+
             # Check status
             echo "Check status"
             pm2 status
@@ -145,6 +149,10 @@ jobs:
             pm2 start npm --name "client" -- start
             pm2 save
             pm2 status
+
+            # Wait for frontend to start
+            echo "Waiting for frontend to start..."
+            sleep 5
 
             # Test backend
             echo "Test backend"
